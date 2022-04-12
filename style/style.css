@@ -9,6 +9,7 @@ body {
   color: #00664b;
   text-shadow: 2px 2px black;
 }
+
 .dropdownbutton{
   font-size: 2em;
   color: lightgrey;
@@ -16,19 +17,23 @@ body {
   border-radius: 5px;
   border-style: none;
   background-color: rgba(255, 255, 255, 0.3);
+    transition: 1s;
 }
 .dropdown{
   position: relative;
   display: inline-block;
 }
 .dropdown-content{
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
   text-shadow: 1px 1px black;
   z-index: 1;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   min-width: 100%;
   overflow: auto;
+  border-radius: 0px 0px 5px 5px;
+  transition: 1s;
 }
 .dropdown-content a{
   color: black;
@@ -45,13 +50,17 @@ body {
   background-color: rgba(255, 255, 255, 0.3);
 }
 .dropdown:hover .dropdown-content{
-  display: block;
+  visibility:visible;
+  opacity: 100;
+  border-radius: 0px 0px 5px 5px;
+  transition:1s;
 }
 .dropdown:hover .dropdownbutton{
   color: #1a1a1a;
   text-shadow: 1px 1px white;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px 5px 0px 0px;
+    transition: 1s;
 }
 .text{
   font-size: 3em;
@@ -59,6 +68,7 @@ body {
   text-align: center;
   text-shadow: 1px 1px black;
 }
+
 .footer{
   text-align: right;
 }
@@ -77,6 +87,13 @@ a#top-button{
   background-color: rgba(0, 0, 0, 0.3);
   font-family:  Smooch Sans;
   text-align:  center;
+}
+.strong::before{
+content: open-quote;
+}
+.strong::after{
+content:close-quote;
+
 }
 .drum{
   color: lightgrey;
@@ -99,6 +116,7 @@ a#top-button{
 .drum-1, .drum-2, .drum-3, .drum-4, .drum-5, .drum-6, .drum-7, .drum-8, .drum-9{
   float: left;
      width: 15%;
+     height:inherit;
      margin-right: 2%;
      padding: 20px;
      box-sizing: border-box;
@@ -111,4 +129,7 @@ a#top-button{
 }
 button{
   cursor: pointer;
+}
+button:active{
+  cursor:crosshair;
 }
