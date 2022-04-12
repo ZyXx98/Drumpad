@@ -1,0 +1,1 @@
+document.getElementsByClassName("drum-1");
