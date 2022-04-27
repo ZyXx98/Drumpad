@@ -136,17 +136,15 @@ button{
 button:active{
   cursor:crosshair;
 }
-.start-stop{
-  margin: auto;
-  width: 70%;
-}
 .loop-start-button{
-  margin: auto;
-  width: 10%;
   background-image: -webkit-linear-gradient(#00ff00,#006600);
+  width: 100%;
 }
 .loop-pause-button{
+  background-image: -webkit-linear-gradient(#ff0000,#660000);
+  width: 100%;
+}
+.loop-start{
   margin: auto;
   width: 10%;
-  background-image: -webkit-linear-gradient(#ff0000,#660000);
 }
