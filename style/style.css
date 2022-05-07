@@ -38,19 +38,30 @@ body {
   border-radius: 0px 0px 5px 5px;
   transition: .5s;
 }
-.dropdown-content a{
+.dropdown-content button{
   color: black;
   text-shadow: 1px 1px lightgrey;
   font-family: Smooch sans;
   font-size: 1.5em;
   text-decoration: none;
+  width: 100%;
   display: block;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.dropdown-content a:hover {
+.dropdown-content button:hover {
   color: white;
   text-shadow: 1px 1px black;
   background-color: rgba(255, 255, 255, 0.3);
+}
+.button-content {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+}
+.dropdown-content button:hover .button-content{
+  visibility:visible;
+  opacity: 100;
 }
 .dropdown:hover .dropdown-content{
   visibility:visible;
@@ -64,6 +75,21 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 5px 5px 0px 0px;
     transition: .5s;
+}
+.bassdrums-hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+}
+.bassdrums-shown {
+  margin-left: auto;
+  visibility: visible;
+  display: flex;
+  opacity: 100;
+}
+.drumbutton-1{
+  margin-right: auto;
 }
 .text{
   font-size: 3em;
@@ -90,13 +116,6 @@ a#top-button{
   background-color: rgba(0, 0, 0, 0.3);
   font-family:  Smooch Sans;
   text-align:  center;
-}
-.strong::before{
-content: open-quote;
-}
-.strong::after{
-content:close-quote;
-
 }
 .drum{
   color: lightgrey;
