@@ -76,18 +76,6 @@ body {
   border-radius: 5px 5px 0px 0px;
     transition: .5s;
 }
-.bassdrums-hidden {
-  visibility: hidden;
-  opacity: 0;
-  position: absolute;
-  z-index: 2;
-}
-.bassdrums-shown {
-  margin-left: auto;
-  visibility: visible;
-  display: flex;
-  opacity: 100;
-}
 .drumbutton-1{
   margin-right: auto;
 }
@@ -166,4 +154,20 @@ button:active{
 .loop-start{
   margin: auto;
   width: 10%;
+}
+
+
+
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+}
+.shown {
+  margin-left: auto;
+  visibility: visible;
+  display: flex;
+  opacity: 100;
 }
